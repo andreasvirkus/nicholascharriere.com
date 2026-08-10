@@ -114,9 +114,21 @@ const ogImage = image || "https://nicholascharriere.com/nicholas2.jpg";
   </head>
   <body class="bg-page text-body max-w-[760px] mx-auto p-5 leading-normal transition-colors">
     <header>
-      <a href="/" class="no-underline hover:no-underline">
-        <h1 class="text-[1.5em] text-heading font-bold">Nicholas Charriere</h1>
-      </a>
+      <div class="flex flex-row items-center justify-between gap-x-3">
+        <a href="/" class="no-underline hover:no-underline">
+          <h1 class="text-[1.5em] text-heading font-bold">Nicholas Charriere</h1>
+        </a>
+        <button
+          type="button"
+          onclick="window.__toggleTheme && window.__toggleTheme()"
+          aria-label="Toggle light and dark theme"
+          title="Toggle light / dark"
+          class="cursor-pointer border-0 bg-transparent p-0 leading-none text-link hover:text-heading transition-colors"
+        >
+          <HalfMoon class="size-[18px] dark:hidden" />
+          <SunLight class="size-[18px] hidden dark:inline" />
+        </button>
+      </div>
       <nav class="flex flex-row flex-wrap gap-x-3 my-4">
         <a href="/blog" class="text-link hover:underline">blog</a>
         <a href="/til" class="text-link hover:underline">til</a>
@@ -125,16 +137,6 @@ const ogImage = image || "https://nicholascharriere.com/nicholas2.jpg";
         <a href="/watching" class="text-link hover:underline">watching</a>
         <a href="/quotes" class="text-link hover:underline">quotes</a>
         <a href="https://x.com/nichochar" class="text-link hover:underline" target="_blank">@nichochar</a>
-        <button
-          type="button"
-          onclick="window.__toggleTheme && window.__toggleTheme()"
-          aria-label="Toggle light and dark theme"
-          title="Toggle light / dark"
-          class="ml-auto cursor-pointer border-0 bg-transparent p-0 leading-none text-link hover:text-heading transition-colors"
-        >
-          <HalfMoon class="size-[18px] dark:hidden" />
-          <SunLight class="size-[18px] hidden dark:inline" />
-        </button>
       </nav>
     </header>
 
