@@ -18,6 +18,17 @@ This is a personal website for Nicholas Charriere, CEO of Mocha (built by him)(b
 - **Content Collections**: Blog posts live in `src/content/blog/` as MDX files. Schema defined in `src/content/config.ts` requires `title`, `tags`, and `published` date.
 - **Pages**: Static pages in `src/pages/` (index, quotes, projects). Blog uses dynamic routing via `[...slug].astro`.
 
+### LLM discoverability (llms.txt + Markdown endpoints)
+
+The site is built to be readable by AI agents/crawlers. Two dynamic endpoints power this — keep them working when changing content structure:
+
+- **`src/pages/llms.txt.ts`** → serves `/llms.txt`: a site summary plus links to every published post (pointing at its `.md` version) and the key pages. It reads the `blog` collection at build time, so **new posts appear automatically** — no manual edits.
+- **`src/pages/blog/[slug].md.ts`** → serves `/blog/<slug>.md`: a clean Markdown version of each post. It strips MDX `import`/`export` lines and `<Image />` components, and prepends a title + date/tags/source header (skips a duplicate H1 if the body already opens with one).
+
+Why: `@astrojs/sitemap` (see `astro.config.mjs`) already emits `sitemap-index.xml` (referenced in `public/robots.txt`, with `/family/*` excluded). llms.txt + per-post Markdown are the additions that let LLMs read content without parsing HTML. Content-negotiation headers (`Accept: text/markdown`) were intentionally skipped — low ROI since the `.md` URLs are already discoverable via llms.txt.
+
+If you add a new content collection or new top-level pages, update `src/pages/llms.txt.ts` so they show up in the index.
+
 ### Styling
 
 Custom Tailwind theme in `tailwind.config.mjs`:
@@ -32,14 +43,9 @@ Custom Tailwind theme in `tailwind.config.mjs`:
 
 ## Deployment
 
-The site is hosted on a Digital Ocean droplet. Nginx serves the static files from the `dist/` directory (not a reverse proxy since there's no backend server—just static file serving).
+The site is a static build hosted on **Cloudflare Pages** (the old DigitalOcean droplet + nginx flow is dead — do not `ssh do`).
 
-To deploy:
-1. Push changes to `main`
-2. Run: `ssh do "source ~/.zshrc && cd nicholascharriere.com && git pull && npm run build"`
-
-Or manually:
-1. `ssh do`
-2. `cd nicholascharriere.com && git pull && npm run build`
-
-The build outputs to `dist/`, which nginx is configured to serve.
+- Pages project: `nicholascharriere-com`, connected to GitHub repo `nichochar/nicholascharriere.com`.
+- Build command: `npm run build` · output directory: `dist` · production branch: `main`.
+- **To deploy: just push to `main`.** Cloudflare Pages auto-builds and deploys. No SSH, no manual build step, no server.
+- Custom domains: apex `nicholascharriere.com` + `www`.
