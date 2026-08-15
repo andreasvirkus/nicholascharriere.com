@@ -116,6 +116,11 @@ const quotes = [
   {
     quote: "Good things come to those who wait, but only the things left by those who hustle.",
     source: "Attributed to Abraham Lincoln (apocryphal)"
+  },
+  {
+    quote: "The pursuit of excellence does not require justification.",
+    source: "Mitchell Hashimoto",
+    sourceUrl: "https://x.com/mitchellh/status/2074225453217505494"
   }
 ];
 ---
@@ -129,7 +134,9 @@ const quotes = [
           <blockquote class="py-1 my-1">
             <p>"{quote.quote}"</p>
           </blockquote>
-          <p class="font-light text-sm"> — {quote.source}</p>
+          <p class="font-light text-sm"> — {quote.sourceUrl ? (
+            <a href={quote.sourceUrl} class="underline" target="_blank" rel="noopener noreferrer">{quote.source}</a>
+          ) : quote.source}</p>
         </div>
       ))
     }
