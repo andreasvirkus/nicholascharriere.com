@@ -3,52 +3,33 @@ import Layout from "../layouts/Layout.astro";
 
 const quotes = [
   {
-    quote: "The universe is change; our life is what our thoughts make it.",
-    source: "Marcus Aurelius, Meditations 4.3",
-  },
-  {
     quote: "Strive not to be a success, but rather to be of value.",
     source: "Albert Einstein",
   },
   {
-    quote: "The impediment to action advances action. What stands in the way becomes the way.",
-    source: "Marcus Aurelius",
+    quote: "The pursuit of excellence does not require justification.",
+    source: "Mitchell Hashimoto",
+    sourceUrl: "https://x.com/mitchellh/status/2074225453217505494"
   },
   {
     quote: "The best way to predict the future is to invent it.",
     source: "Alan Kay",
   },
   {
-    quote: "Focusing is about saying no.",
-    source: "Steve Jobs",
+    quote: "I think a life properly lived is just learn, learn, learn all the time.",
+    source: "Charlie Munger",
   },
   {
-    quote: "When the enemy is making a false movement we must take good care not to interrupt him.",
-    source: "Napoleon",
+    quote: "The universe is change; our life is what our thoughts make it.",
+    source: "Marcus Aurelius, Meditations 4.3",
   },
   {
-    quote: "Don't fear moving slowly. Fear standing still.",
-    source: "Chinese Proverb",
-  },
-  {
-    quote: "It's not what happens to you, but how you react to it that matters.",
-    source: "Epictetus",
+    quote: "There's a tremendous amount of craftsmanship in between a great idea and a great product.",
+    source: "Steve Jobs"
   },
   {
     quote: "Tell me to what you pay attention, and I will tell you who you are.",
     source: "Jose Ortega y Gasset"
-  },
-  {
-    quote: "When the winds of change blow, some people build walls and others build windmills.",
-    source: "Chinese Proverb",
-  },
-  {
-    quote: "There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.",
-    source: "Ernest Hemingway",
-  },
-  {
-    quote: "If you love life, don't waste time, for time is what life is made up of.",
-    source: "Bruce Lee",
   },
   {
     quote:
@@ -56,29 +37,24 @@ const quotes = [
     source: "Donald Knuth",
   },
   {
-    quote: "However little television you watch, watch less.",
-    source: "David McCullough",
+    quote: "If you want to be successful in business (in life, actually), you have to create more than you consume.",
+    source: "Jeff Bezos"
   },
   {
-    quote: "To improve is to change. To be perfect is to have changed often.",
-    source: "Winston Churchill",
-  },
-  {
-    quote: "I think a life properly lived is just learn, learn, learn all the time.",
-    source: "Charlie Munger",
+    quote: "Don't fear moving slowly. Fear standing still.",
+    source: "Chinese Proverb",
   },
   {
     quote: "Simple, correct, fast. In that order.",
     source: "Drew DeVault",
   },
   {
-    quote: "Ask for feedback on your attempts, not advice on your ideas.",
-    source: "Anonymous",
+    quote: "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.",
+    source: "Antoine de Saint-Exupéry"
   },
   {
-    quote:
-      "The pessimist complains about the wind. The optimist expects it to change. The leader adjusts the sails.",
-    source: "John Maxwell",
+    quote: "There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.",
+    source: "Ernest Hemingway",
   },
   {
     quote:
@@ -86,41 +62,65 @@ const quotes = [
     source: "John Carmack",
   },
   {
-    quote: "Space I can recover. Time, never.",
-    source: "Napoleon"
-  },
-  {
-    quote: "There's a tremendous amount of craftsmanship in between a great idea and a great product.",
-    source: "Steve Jobs"
+    quote: "Focusing is about saying no.",
+    source: "Steve Jobs",
   },
   {
     quote: "A master in the art of living draws no sharp distinction between his work and his play; his labor and his leisure; his mind and his body; his education and his recreation. He hardly knows which is which. He simply pursues his vision of excellence through whatever he is doing, and leaves others to determine whether he is working or playing. To himself, he always appears to be doing both.",
     source: "François Auguste de Chateaubriand"
   },
   {
+    quote: "It's not what happens to you, but how you react to it that matters.",
+    source: "Epictetus",
+  },
+  {
+    quote: "However little television you watch, watch less.",
+    source: "David McCullough",
+  },
+  {
+    quote: "The impediment to action advances action. What stands in the way becomes the way.",
+    source: "Marcus Aurelius",
+  },
+  {
     quote: "As you become an adult, you realize that things around you weren't just always there; people made them happen. But only recently have I started to internalize how much tenacity *everything* requires. That hotel, that park, that railway. The world is a museum of passion projects.",
     source: "John Collison"
   },
   {
-    quote: "If you want to be successful in business (in life, actually), you have to create more than you consume.",
-    source: "Jeff Bezos"
+    quote: "If you love life, don't waste time, for time is what life is made up of.",
+    source: "Bruce Lee",
+  },
+  {
+    quote:
+      "The pessimist complains about the wind. The optimist expects it to change. The leader adjusts the sails.",
+    source: "John Maxwell",
   },
   {
     quote: "It is only with the heart that one can see rightly; what is essential is invisible to the eye.",
     source: "Antoine de Saint-Exupéry, The Little Prince"
   },
   {
-    quote: "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.",
-    source: "Antoine de Saint-Exupéry"
+    quote: "When the enemy is making a false movement we must take good care not to interrupt him.",
+    source: "Napoleon",
+  },
+  {
+    quote: "To improve is to change. To be perfect is to have changed often.",
+    source: "Winston Churchill",
+  },
+  {
+    quote: "When the winds of change blow, some people build walls and others build windmills.",
+    source: "Chinese Proverb",
   },
   {
     quote: "Good things come to those who wait, but only the things left by those who hustle.",
     source: "Attributed to Abraham Lincoln (apocryphal)"
   },
   {
-    quote: "The pursuit of excellence does not require justification.",
-    source: "Mitchell Hashimoto",
-    sourceUrl: "https://x.com/mitchellh/status/2074225453217505494"
+    quote: "Space I can recover. Time, never.",
+    source: "Napoleon"
+  },
+  {
+    quote: "Ask for feedback on your attempts, not advice on your ideas.",
+    source: "Anonymous",
   }
 ];
 ---
