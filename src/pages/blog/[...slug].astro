@@ -22,6 +22,11 @@ const { Content } = await entry.render();
     entry.data.published && (
       <Prose>
         <Content />
+        {entry.data.hn && (
+          <p style="font-size:0.8rem;opacity:0.6;margin-top:1.5rem;">
+            <a href={entry.data.hn}>Discuss on Hacker News</a>
+          </p>
+        )}
       </Prose>
     )
   }
