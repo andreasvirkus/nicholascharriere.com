@@ -39,6 +39,7 @@ ${postLines}
 
 ## Meta
 - Sitemap: ${SITE}/sitemap-index.xml
+- RSS feed: ${SITE}/rss.xml
 `;
 
   return new Response(body, {
