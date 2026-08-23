@@ -14,6 +14,7 @@ const { description } = Astro.props || {
   description: "The personal website of Nicholas Charriere.",
 };
 const ogImage = image || "https://nicholascharriere.com/nicholas2.jpg";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -24,13 +25,14 @@ const ogImage = image || "https://nicholascharriere.com/nicholas2.jpg";
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalURL} />
     <meta
       name="keywords"
       content="Nicholas Charriere,Srcbook,founder,personal page nicholas charriere,programmer AI"
     />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://nicholascharriere.com/" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="Nicholas Charriere" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content={ogImage} />

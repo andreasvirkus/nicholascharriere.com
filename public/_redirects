@@ -1,0 +1,2 @@
+# Prefer naked domain (matches astro.config site + sitemap)
+https://www.nicholascharriere.com/* https://nicholascharriere.com/:splat 301
