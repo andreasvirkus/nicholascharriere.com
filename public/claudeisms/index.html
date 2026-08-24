@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>claude-isms — a field guide to Claude's verbal tics</title>
+  <meta name="description" content="The lexicon of Claude's most distinctive phrasing, catalogued with the seriousness it does not entirely deserve." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f3f0;
+      --ink: #1c1b19;
+      --muted: #6b6963;
+      --line: #d9d6cf;
+      --paper: #faf9f6;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .shell { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 6rem; }
+    header { margin-bottom: 3rem; }
+    h1 {
+      font-family: "IBM Plex Serif", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      letter-spacing: -0.03em;
+      margin: 0 0 0.75rem;
+    }
+    h1 .dot { color: var(--muted); font-weight: 400; }
+    .sub {
+      color: var(--muted);
+      max-width: 38em;
+      margin: 0 0 1rem;
+      font-size: 1.05rem;
+    }
+    .stat {
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      color: var(--muted);
+    }
+    .stat b { color: var(--ink); font-weight: 600; }
+    .letter {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin: 2.5rem 0 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .entry { padding: 1.15rem 0 1.35rem; border-bottom: 1px solid var(--line); }
+    .term {
+      font-family: "IBM Plex Serif", Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 0.15rem;
+    }
+    .kind { color: var(--muted); font-weight: 400; font-size: 0.95rem; }
+    .def { margin: 0.4rem 0 0.7rem; }
+    .cite {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .cite a { color: var(--muted); }
+    a { color: var(--ink); }
+    footer {
+      margin-top: 3.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>claude-isms<span class="dot">.</span></h1>
+      <p class="sub">The lexicon of Claude’s verbal tics, catalogued with the seriousness they do not entirely deserve. Screenshots cited. Sincerity, as always, indeterminate.</p>
+      <p class="stat"><b>1</b> entry · peer review conducted on the timeline · more soon</p>
+    </header>
+
+    <div class="letter">E</div>
+    <article class="entry">
+      <h2 class="term">The entropy-reducing move: make the fold the statement <span class="kind">(phrase)</span></h2>
+      <p class="def">Claude’s habit of dressing a banal suggestion in the language of physics. You were going to delete a comment. Claude would like you to know this is thermodynamics.</p>
+      <p class="cite">attested <a href="https://x.com/teropa/status/2091902728104497203" target="_blank" rel="noopener">@teropa, Aug 24, 2026</a></p>
+    </article>
+
+    <footer>
+      A living field guide. Domain later. Built like <a href="https://sfisms.org">sf-isms</a>, with less fog and more folding.
+    </footer>
+  </div>
+</body>
+</html>
